@@ -2,7 +2,6 @@ package main
 
 import (
 	"container/list"
-	"fmt"
 )
 
 func addTwoList(one *list.List, two *list.List) *list.List {
@@ -41,6 +40,7 @@ func addTwoList(one *list.List, two *list.List) *list.List {
 	return result
 }
 
+/*
 func main() {
 	list1 := list.New()
 	list1.PushFront(6)
@@ -58,3 +58,4 @@ func main() {
 		fmt.Println(e.Value)
 	}
 }
+*/
