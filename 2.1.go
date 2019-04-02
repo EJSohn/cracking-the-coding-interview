@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 type Node struct {
 	data int
 	next *Node
@@ -14,6 +10,8 @@ type LinkedList struct {
 }
 
 func removeOverlap(list *LinkedList) {
+	// 원소를 특정하게 정의하지 않는다면
+	// golang에서는 hashset이 없으니 hashmap을 쓰는 수밖에 없다.
 	var arr [10]bool
 
 	for e := list.head; e.next != nil; e = e.next {
@@ -24,6 +22,7 @@ func removeOverlap(list *LinkedList) {
 	}
 }
 
+/*
 func main() {
 	tail9 := Node{data: 6, next: nil}
 	tail8 := Node{data: 5, next: &tail9}
@@ -42,3 +41,4 @@ func main() {
 		fmt.Println(e.data)
 	}
 }
+*/
